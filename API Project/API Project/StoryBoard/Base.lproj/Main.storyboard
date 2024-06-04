@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HyE-8D-tA3">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Representatives-->
+        <scene sceneID="nbF-sw-HS6">
+            <objects>
+                <tableViewController title="Representatives" id="NaI-9J-pyG" customClass="RepTableViewController" customModule="API_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NTC-HT-js6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Enter Zipcode" id="QxP-17-kWo">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="NaI-9J-pyG" id="kfq-UC-b9J"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepCell" id="o2z-4C-I4r" customClass="RepTableViewCell" customModule="API_Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="393" height="47.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o2z-4C-I4r" id="MEO-gy-nlW">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="47.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wBH-wg-beg">
+                                            <rect key="frame" x="16" y="0.0" width="361" height="47.333333333333336"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bkL-Pw-w8a">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="15.666666666666666"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HlA-Qx-AbG">
+                                                    <rect key="frame" x="0.0" y="15.666666666666668" width="361" height="15.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MZ9-hs-7v7">
+                                                    <rect key="frame" x="0.0" y="31.333333333333332" width="361" height="15.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="wBH-wg-beg" secondAttribute="bottom" id="3O6-r0-wTU"/>
+                                        <constraint firstItem="wBH-wg-beg" firstAttribute="top" secondItem="MEO-gy-nlW" secondAttribute="top" id="A4r-CL-eKc"/>
+                                        <constraint firstAttribute="trailing" secondItem="wBH-wg-beg" secondAttribute="trailing" constant="16" id="Ee4-pc-ADq"/>
+                                        <constraint firstItem="wBH-wg-beg" firstAttribute="leading" secondItem="MEO-gy-nlW" secondAttribute="leading" constant="16" id="W6m-xP-RvT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="repLinkLabel" destination="MZ9-hs-7v7" id="flf-5S-K37"/>
+                                    <outlet property="repNameLabel" destination="bkL-Pw-w8a" id="nyV-ji-30y"/>
+                                    <outlet property="repStateLabel" destination="HlA-Qx-AbG" id="8Nj-Iu-bzz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NaI-9J-pyG" id="MpI-MZ-5LJ"/>
+                            <outlet property="delegate" destination="NaI-9J-pyG" id="NOJ-kt-94e"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="" id="EeL-DG-hI9">
+                        <imageReference key="image" image="person" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="labelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="labelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="searchBar" destination="QxP-17-kWo" id="vDp-ud-9Kq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gw3-V6-bKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878.6259541984732" y="38.732394366197184"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="x1C-9g-BLJ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HyE-8D-tA3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C4F-T1-hqc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e9P-CE-zEw" kind="relationship" relationship="viewControllers" id="OrY-id-N2X"/>
+                        <segue destination="NaI-9J-pyG" kind="relationship" relationship="viewControllers" id="XDo-tO-j2i"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tE-J5-qMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="-689"/>
+        </scene>
+        <!--Dog View Controller-->
+        <scene sceneID="OFh-W6-g5Z">
+            <objects>
+                <viewController id="e9P-CE-zEw" customClass="DogViewController" customModule="API_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bu6-ch-Imp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMw-tp-dqE">
+                                <rect key="frame" x="16" y="245.66666666666663" width="361" height="361"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="361" id="jG0-Cf-9Mi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeX-Bq-Tkt">
+                                <rect key="frame" x="16" y="622.66666666666663" width="361" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w7H-rH-2rU"/>
+                                </constraints>
+                                <color key="tintColor" red="0.10022290759999999" green="0.10582373420000001" blue="0.1164488841" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="New Image">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="tableCellBlueTextColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="newDogButtonAction:" destination="e9P-CE-zEw" eventType="touchUpInside" id="RtR-Wk-kLv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iWu-9N-Pq2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iWu-9N-Pq2" firstAttribute="trailing" secondItem="DMw-tp-dqE" secondAttribute="trailing" constant="16" id="56I-g8-lvx"/>
+                            <constraint firstItem="iWu-9N-Pq2" firstAttribute="trailing" secondItem="jeX-Bq-Tkt" secondAttribute="trailing" constant="16" id="Bsa-1q-zBk"/>
+                            <constraint firstItem="jeX-Bq-Tkt" firstAttribute="top" secondItem="DMw-tp-dqE" secondAttribute="bottom" constant="16" id="GOe-Ps-74R"/>
+                            <constraint firstItem="DMw-tp-dqE" firstAttribute="centerY" secondItem="Bu6-ch-Imp" secondAttribute="centerY" id="QUc-zE-uiP"/>
+                            <constraint firstItem="DMw-tp-dqE" firstAttribute="leading" secondItem="iWu-9N-Pq2" secondAttribute="leading" constant="16" id="ReS-bl-bzJ"/>
+                            <constraint firstItem="DMw-tp-dqE" firstAttribute="centerX" secondItem="Bu6-ch-Imp" secondAttribute="centerX" id="eYH-9K-eHo"/>
+                            <constraint firstItem="jeX-Bq-Tkt" firstAttribute="leading" secondItem="iWu-9N-Pq2" secondAttribute="leading" constant="16" id="ibb-8l-vlC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="Xyr-k3-qUE">
+                        <imageReference key="image" image="dog" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="dog.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="dogImage" destination="DMw-tp-dqE" id="92u-iR-ENo"/>
+                        <outlet property="newDogButtonOutlet" destination="jeX-Bq-Tkt" id="2n9-iN-rfA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bc-lZ-hUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194.6564885496182" y="38.732394366197184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dog" catalog="system" width="128" height="99"/>
+        <image name="dog.fill" catalog="system" width="128" height="100"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
